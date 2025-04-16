@@ -9,12 +9,12 @@ const state = {
         gameVelocity: 1000,
         hitPosition: 0,
         result: 0,
-        curretTime: 60
+        curretTime: 60,
     },
     actions: {
         timerId: setInterval(randomSquare, 1000),
         countDownTimerId: setInterval(countDown, 1000),
-    }
+    },
 };
 
 function countDown() {
@@ -23,7 +23,7 @@ function countDown() {
     if(state.values.curretTime <= 0 ){
         clearInterval(state.actions.countDownTimerId);
         clearInterval(state.actions.timerId);
-        alert("Seu tempo acabou! O seu resultado foi: " + state,values.result);
+        alert("Seu tempo acabou! O seu resultado foi: " + state.values.result);
     }
 }
 
